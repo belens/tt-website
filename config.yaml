@@ -1,0 +1,16 @@
+---
+baseurl : "http://www.tomtosseyn.be/"
+title : "Tom Tosseyn"
+languageCode: "en-us"
+preserveTaxonomyNames: true
+pluralizelisttitles: false
+params:
+  description: "Graphic design, logo development, concept design, artdirecting and consultancy for fashion & print."
+  themeColor: "#111"
+  og:
+    title: "November Five"
+    description: "Graphic design, logo development, concept design, artdirecting and consultancy for fashion & print."
+    image: "http://www.tomtosseyn.be/images/share_image.png"
+MetaDataFormat: yaml
+
+---

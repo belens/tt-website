@@ -1,0 +1,23 @@
+{
+  "name": "A Choco Project",
+  "version": "1.0.0",
+  "description": "A project created with Choco by Appstrakt",
+  "main": "static",
+  "authors": [
+    "Jeroen Joosen <jeroen@appstrakt.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.*",
+    "bootstrap-sass-official": "3.1.1",
+    "bootstrap": "~3.0.2"
+  }
+}
