@@ -1,4 +1,4 @@
-@mixin textGlitch($name, $intensity, $textColor, $background, $highlightColor1, $highlightColor2, $width, $height) {
+@mixin textGlitch($name, $intensity, $textColor, $background, $highlightColor1, $highlightColor2, $width, $height, $amount, $delay) {
   color: $textColor;
   position: relative;
   $steps: $intensity;
@@ -28,16 +28,18 @@
   &:after {
     left: 2px;
     text-shadow: -1px 0 $highlightColor1;
-    animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
+    animation: #{$name}-anim-1 2s $amount linear alternate-reverse;
+    animation-delay: $delay;
   }
   &:before {
     left: -2px;
     text-shadow: 2px 0 $highlightColor2;
-    animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+    animation: #{$name}-anim-2 3s $amount linear alternate-reverse;
+    animation-delay: $delay;
   }
 }
 
-@mixin imgGlitch($name, $intensity, $width, $height, $top, $left) {
+@mixin imgGlitch($name, $intensity, $width, $height, $top, $left, $amount, $delay) {
   $steps: $intensity;
   // Ensure the @keyframes are generated at the root level
   @at-root {
@@ -71,7 +73,7 @@
   }
 }
 
-@mixin svgGlitch($name, $intensity, $fillColor, $background, $fillHighlight1, $fillHighlight2, $width, $height, $top, $left) {
+@mixin svgGlitch($name, $intensity, $fillColor, $background, $fillHighlight1, $fillHighlight2, $width, $height, $top, $left, $amount, $delay) {
   $steps: $intensity;
   // Ensure the @keyframes are generated at the root level
   @at-root {
@@ -102,11 +104,13 @@
   svg:nth-child(2) {
     fill: $fillHighlight1;
     left: ($left - 2) + px;
-    animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
+    animation: #{$name}-anim-1 2s $amount linear alternate-reverse;
+    animation-delay: $delay;
   }
   svg:nth-child(3) {
     fill: $fillHighlight2;
     left: ($left + 2) + px;
-    animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+    animation: #{$name}-anim-2 3s $amount linear alternate-reverse;
+    animation-delay: $delay;
   }
 }

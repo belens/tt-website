@@ -8,9 +8,9 @@ params:
   description: "Graphic design, logo development, concept design, artdirecting and consultancy for fashion & print."
   themeColor: "#111"
   og:
-    title: "November Five"
+    title: "Tom Tosseyn"
     description: "Graphic design, logo development, concept design, artdirecting and consultancy for fashion & print."
-    image: "http://www.tomtosseyn.be/images/share_image.png"
+    image: "https://s3-eu-west-1.amazonaws.com/www.tomtosseyn.be/staging/images/share-image.png"
 MetaDataFormat: yaml
 
 ---

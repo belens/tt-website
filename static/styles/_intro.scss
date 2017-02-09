@@ -1,8 +1,8 @@
 // @import "compass/css3";
 
 body {
-  background: #fff url('/images/intro-crop-bg-v2.jpg');
-  background-size: 33vw auto;
+  background: #fff url('../images/intro-crop-bg-v2.jpg');
+  background-size: 25vw auto;
   height: 100vh;
   
   @media (max-width: 900px) {
@@ -12,6 +12,8 @@ body {
   @media (max-width: 500px) {
     background-size: 50vw auto;
   }
+  font-family: $font-family-intro;  
+  color: white;
 }
 
 .wrap {
@@ -21,23 +23,33 @@ body {
   align-items: center;
 }
 
+.centered {
+  align-self: center;
+  margin: 0 auto;
+}
+.nav {
+  background: #000;
+  a {
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
 .enter {
   display: block;
-  text-decoration: none;
-  align-self: center;
+  text-decoration: none; 
   margin: 0 auto;
   
   padding: 0px 25px;
   padding-top: 5px; // lineheight seems weird
   
-  font-family: $font-family-intro;
   font-size: 150px;
   font-weight: 900;
   font-style: italic;
   color: #fff;
-  line-height: 1;
-  
   cursor: pointer;
+  line-height: 1.1;
+  
   background-color: #000;
   
   @media (max-width: 767px) {
@@ -62,8 +74,12 @@ body {
   7. Width (px)
   8. Height (px)
 */
+.glitch {
+  @include textGlitch("glitch", 10, white, black, red, blue, 566, 141, 1, 2s);
+}
+
 .glitch:hover,
 .glitch:active,
 .glich:focus {
-  @include textGlitch("glitch", 10, white, black, red, blue, 566, 141);
+  @include textGlitch("glitch", 10, white, black, red, blue, 566, 141, infinite, 0);
 }
