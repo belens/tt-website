@@ -11,6 +11,6 @@ gulp.task('images', function () {
           }
       }))
       .pipe(changed('build/images'))
-      .pipe(imagemin())
+    //   .pipe(imagemin())
       .pipe(gulp.dest('build/images'));
 });

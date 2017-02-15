@@ -1,17 +1,17 @@
 {{ partial "head.html" .}}
-<body>
-  
-<main class="wrap">
-  <div class="centered">
 
-    <a href="http://www.tomtosseyn.be" class="enter"><span class="glitch" data-text="ENTER">ENTER</span></a>
-    <div class="nav">
-      <a href="">Fashion</a>
-      <a href="">Logos</a>
-      <a href="">Print</a>
-      <a href="">Clients</a>
+<body>
+  {{ partial "intro.html" .}}
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+
+  <div class="info-text" id="info-text">
+    {{ $.Site.Data.info.info | markdownify }}
+    <div class="social">
+      <a href="http://instagram.com/tomtosseyn" target="_blank"><img src="/images/instagram.svg" alt="instagram"></a>
     </div>
   </div>
-</main>
-{{ partial "footer" .}}
+  
+  {{ partial "footer" .}}
 </body>

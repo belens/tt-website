@@ -1,85 +1,106 @@
-// @import "compass/css3";
-
+html,
 body {
-  background: #fff url('../images/intro-crop-bg-v2.jpg');
-  background-size: 25vw auto;
-  height: 100vh;
-  
-  @media (max-width: 900px) {
-    background-size: 33vw auto;  
-  }
-
-  @media (max-width: 500px) {
-    background-size: 50vw auto;
-  }
   font-family: $font-family-intro;  
   color: white;
+  height: 100vh; 
+}
+
+.intro {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;  
+  overflow: hidden;
+  background-size: 100vw auto;
+  transition: background 0.3s ease;
+
+  cursor: pointer;
+  .myar {
+    display: none;
+  }
+
+}
+
+.info-text {
+  display: none;
+}
+
+.tingle-enabled .intro {
+  background-image: url('/images/contact_backdrop_md.png') !important;
+  background-size: 75vw auto;
 }
 
 .wrap {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
 }
 
 .centered {
-  align-self: center;
   margin: 0 auto;
 }
-.nav {
-  background: #000;
-  a {
-    color: white;
-    text-transform: uppercase;
-  }
+
+.btn--info {
+  position: absolute;
+  margin: 20px;
+  height: 60px;
+  user-select: none;
+  cursor: pointer; 
 }
 
-.enter {
-  display: block;
-  text-decoration: none; 
-  margin: 0 auto;
-  
-  padding: 0px 25px;
-  padding-top: 5px; // lineheight seems weird
-  
-  font-size: 150px;
-  font-weight: 900;
-  font-style: italic;
-  color: #fff;
-  cursor: pointer;
-  line-height: 1.1;
-  
-  background-color: #000;
-  
-  @media (max-width: 767px) {
-    padding: 0px 30px 0 10px;
-    font-size: 20vw;
-  }
-}
-
-.glitch {
-  display: block;
-}
-
-/*
-  (TEXT) PARAMS
-  =================
-  1. Namespace
-  2. Intensity
-  3. Text color
-  4. Background color (flat)
-  5. Highlight #1 color
-  6. Highlight #2 color
-  7. Width (px)
-  8. Height (px)
+/** 
+  background customizations
 */
-.glitch {
-  @include textGlitch("glitch", 10, white, black, red, blue, 566, 141, 1, 2s);
+
+.intro {
+
+  &.timcoppens {
+    background-size: 160vw auto; /* TODO: generate high res image */
+  }
+
+  &.bag {
+    background-size: 77vw auto;
+  }
+
+  &.deathby {
+    background-size: 80vw auto;
+  }
+
+  &.buggy-small {
+    background-image: url('../images/intro-crop-bg-v2.jpg');
+    background-size: 25vw auto;
+
+    @media (max-width: 900px) {
+      background-size: 33vw auto;  
+    }
+
+    @media (max-width: 500px) {
+      background-size: 50vw auto;
+    }
+  }
+
+  &.myar {
+    background-color: #000;
+    .myar {
+      display: block
+    }
+    video {
+      width: 100vw;
+      height: auto;
+    }
+  }
 }
 
-.glitch:hover,
-.glitch:active,
-.glich:focus {
-  @include textGlitch("glitch", 10, white, black, red, blue, 566, 141, infinite, 0);
-}
+// .animate-glitch {
+//   display: block;
+// }
+// $name, $intensity, $width, $height, $top, $left, $amount, $delay
+// .animate-glitch {
+//    @include imgGlitch("animate-glitch", 30, 70, 70, 40, 40, 1, 3s);
+// }
+
+// .animate-glitch:hover,
+// .animate-glitch:active,
+// .animate-glitch:focus {
+//    @include imgGlitch("animate-glitch", 30, 70, 70, 40, 40, Infinite, 0);
+// }
