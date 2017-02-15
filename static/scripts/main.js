@@ -25,7 +25,7 @@ $(function () {
   })
 })
 
-var bgs = {
+window.bgs = {
   'deathby': {
     src: '/images/deathby.png',
     styleClass: 'deathby',
@@ -118,24 +118,27 @@ $(document).ready(function () {
   
   
   selectBg(index)
-  $('.wrap').click(function () {
+  $('.intro').click(function () {
     selectBg(getNextArrIndex(index, backgrounds))
   })
 })
 
 function selectBg(i) {
   var bg = backgrounds[i]
-  
-  console.log(bg, i)
+  var bgObj = bgs[bg]
+  console.log(bgObj, i)
   
   var prevBg = backgrounds[getPrevArrIndex(i, backgrounds)]
   
   $('.intro')
-    .css('background-image', 'url(\'' + bgs[bg].src + '\')')
-    .addClass(bgs[bg].styleClass)
+    .css('background-image', 'url(\'' + bgObj.src + '\')')
+    .addClass(bgObj.styleClass)
     .removeClass(prevBg)
+    .find('.caption')
+      .toggle(!!bgObj.caption)
+      .html(bgObj.caption)
 
-  if($('.intro video:visible').length > 0 && !isMobile()) {
+  if($('.intro video:visible').length > 0 && !Modernizr.touchevents) {
     $('.intro video')[0].muted = false
   } else {
     $('.intro video:hidden')[0].muted = true
@@ -150,31 +153,4 @@ function getNextArrIndex(i, arr) {
 
 function getPrevArrIndex (i, arr) {
   return i - 1 < 0 ? arr.length - 1 : i - 1
-}
-
-var queue = new createjs.LoadQueue(false);
-queue.on("complete", handleComplete, this);
-
-
-var manifest = getBgManifest()
-manifest.push('/images/contact_backdrop_md.png')
-
-queue.loadManifest(manifest)
-
-function handleComplete() {
-  console.log('done', arguments)
-}
-
-function isMobile () {
-  return false
-}
-
-function getBgManifest () {
-
-  var bgManifest = Object.keys(bgs).map(function (i) { return bgs[i].src })
-
-  var nonPriority = bgManifest.slice(0,index)
-  var priority = bgManifest.slice(index)
-
-  return priority.concat(nonPriority)
 }
