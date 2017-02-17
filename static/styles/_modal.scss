@@ -45,35 +45,24 @@
   cursor: default;
 }
 
-// .tingle-modal--noClose .tingle-modal__close {
-.tingle-modal__close {  
+.tingle-modal__close {
+  position: fixed;
+  top: 30px;
+  left: 3rem;
+  z-index: 1000;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.tingle-modal__closeIcon {
   display: none;
 }
 
-// .tingle-modal__close {
-//   position: fixed;
-//   top: 10px;
-//   right: 28px;
-//   z-index: 1000;
-//   padding: 0;
-//   width: 5rem;
-//   height: 5rem;
-//   border: none;
-//   background-color: transparent;
-//   color: #f0f0f0;
-//   font-size: 6rem;
-//   font-family: monospace;
-//   line-height: 1;
-//   cursor: pointer;
-//   -webkit-transition: color .3s ease;
-//   transition: color .3s ease;
-// }
-
-.tingle-modal__closeLabel {
-  display: none;
-}
-
-.tingle-modal__close:hover {
+.tingle-modal__close {
+  display:none;
   color: #fff;
 }
 
@@ -85,8 +74,9 @@
   margin-bottom: auto;
   width: 60%;
   
-  opacity: 1;
+  opacity: 0;
   cursor: auto;
+  transition: opacity 0.2s ease;
   
   h1 {
     font-family: $font-family-heading;
@@ -157,9 +147,10 @@
 }
 
 .tingle-modal--visible .tingle-modal-box {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  // -webkit-transform: scale(1);
+  // -ms-transform: scale(1);
+  // transform: scale(1);
+  opacity: 1;
 }
 
 .tingle-modal--overflow {
@@ -217,7 +208,6 @@
   }
 
   .tingle-modal {
-    top: 60px;
     display: block;
     width: 100%;
   }

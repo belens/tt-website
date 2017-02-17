@@ -9,11 +9,13 @@
   cursor: pointer;
 
   .caption {
+    font-size: 11px;
     display: block;
     position: absolute;
     bottom: 0;
-    padding: 3px 10px 5px 20px;
+    margin: 3px 10px 5px 20px;
     mix-blend-mode: difference;
+    user-select: none;
   }
 
   .myar {
@@ -23,9 +25,11 @@
 
 .no-backgroundblendmode {
   .intro .caption {
+    margin: 0;
+    padding: 3px 10px 5px 20px;
+    
     background-color: black;
     background-color: rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.5);
   }
 }
 
@@ -35,7 +39,7 @@
 
 .tingle-enabled .intro {
   background-image: url('/images/contact_backdrop_md.png') !important;
-  background-size: 75vw auto;
+  background-size: 75vw auto !important;
 }
 
 .wrap {
@@ -50,10 +54,22 @@
 
 .btn--info {
   position: absolute;
-  margin: 20px;
-  height: 60px;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  
   user-select: none;
   cursor: pointer; 
+  z-index: 1001;
+}
+
+.loading {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 28px;
+  @include textGlitch('glitch', 10, white, black, red, blue, 57, 28, infinite, 0)
 }
 
 /** 
