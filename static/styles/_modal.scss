@@ -25,10 +25,15 @@
   -ms-flex-align: center;
   align-items: center;
   overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
   // background: rgba(0, 0, 0, .5);
   opacity: 0;
   cursor: pointer;
   transition: transform .2s ease, opacity 0.2s ease;
+  
+  background-image: url('/images/final/PUNK_1800.jpg');
+  background-size: cover;
+  background-position: 50% 0;
 }
 
 /* confirm and alerts
@@ -92,11 +97,16 @@
     font-size: 12px;
     line-height: 1.5em;
     font-family: $font-family-body;
+    text-align: justify;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
   }
 }
 
 .tingle-modal-box__content {
-  padding: 3rem 3rem;
+  padding: 3rem 3rem 6rem;
 }
 
 
