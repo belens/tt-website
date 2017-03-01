@@ -8,11 +8,13 @@ window.bgs = {
     caption: "Frans Masereel logo revisited + handscreenprinted tot bags as part of project for New York Art Book Fair & MAD Paris."
   },
   'TTweekenderbag_1440': {
-    src: '/images/final/TTweekenderbag_1440.jpg', styleClass:"vh",
+    src: '/images/final/TTweekenderbag_1440.jpg',
+    styleClass: "vh",
     caption: "Tom Tosseyn limited edition weekender bag. Hand made in Antwerp, Belgium"
   },
   'Raf_SIMONS_blanket_2880': {
-    src: '/images/final/Raf_SIMONS_blanket_2880.jpg', styleClass:"vh",
+    src: '/images/final/Raf_SIMONS_blanket_2880.jpg',
+    styleClass: "vh",
     caption: "Raf Simons collection graphics hand screenprinted FW11 homewear blanket. (Photo: Raf Simons)"
   },
   'TIMCOPPENS_parrot_2880': {
@@ -24,11 +26,13 @@ window.bgs = {
     caption: "Raf Simons snake fabric design. (Photo: Raf Simons)"
   },
   'UNDERCOVERS_1800': {
-    src: '/images/final/UNDERCOVERS_1800.jpg', styleClass:"vh",
+    src: '/images/final/UNDERCOVERS_1800.jpg',
+    styleClass: "vh",
     caption: "La Fille d'O 10th anniversary LP leaflet insert"
   },
   'jolie_rouge_1440': {
-    src: '/images/final/jolie_rouge_1440.jpg', styleClass:"vh",
+    src: '/images/final/jolie_rouge_1440.jpg',
+    styleClass: "vh",
     caption: "Tom Tosseyn limited edition foulard, handmade in Italy."
   },
   'acid': {
@@ -70,5 +74,24 @@ window.bgs = {
   "RAFSIMONS_2880": {
     src: "/images/final/RAFSIMONS_2880.jpg",
     caption: "Raf Simons 1995, t-shirt and sweater placed prints. (Photos © Raf Simons)"
+  }
+}
+
+window.welcomeBgs = {
+  'welcome': {
+    src: '/images/final/welcome.jpg',
+    style: {
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-position": "50% 50%",
+      "background-size": "auto"
+    }
+  },
+  'welcome2': {
+    src: '/images/final/welcome2.jpg',
+    style: {
+      "background-color": "rgba(0, 0, 0, 0)",
+      "background-position": "50% 50%",
+      "background-size": "auto"
+    }
   }
 }
