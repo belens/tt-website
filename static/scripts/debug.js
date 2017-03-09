@@ -1,5 +1,5 @@
 $(function () {
-
+  initDebugBtn()
   var props = [
     'background-color',
     'background-size',
@@ -61,3 +61,9 @@ $(function () {
   }
 
 })
+
+function initDebugBtn() {
+  $('.js-toggle-debug').click(function () {
+    $('.debug').toggle()
+  })
+}
